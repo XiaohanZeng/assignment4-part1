@@ -8,7 +8,7 @@ ini_set('display_errors', 'On');
   <body>
     <?php
 	$data = array();
-	if(isset($_GET['key'], $_GET['value'])// unknown number of key/value pair
+	/*if(isset($_GET['key'], $_GET['value'])// unknown number of key/value pair
 	{
 		$data[$GET['key']] = $_GET['value'];
 	}
@@ -20,7 +20,10 @@ ini_set('display_errors', 'On');
 	{
 		$data['parameters']] = 'null';
 	}
+	*/
 	echo "{"Type" : "[GET|POST]", ";
-	echo json_encode($data, JSON_FORCE_OBJECT);
+	echo json_encode($_GET, JSON_FORCE_OBJECT);
 	echo "}";
 	?>
+	</body>
+	</html>
