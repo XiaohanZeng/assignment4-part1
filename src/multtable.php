@@ -83,6 +83,7 @@ ini_set('display_errors', 'On');
 						$wild ++;
 					}
 				}
+				
 				else
 				{
 					while($tall <=$maxRow)
@@ -101,10 +102,9 @@ ini_set('display_errors', 'On');
 							
 						}
 						$startTall++;
-						$tall++; 
 					}				
 				}
-
+				$tall++;
 			}
 		echo "</table>";
 	}
