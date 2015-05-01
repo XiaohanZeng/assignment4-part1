@@ -58,13 +58,13 @@ ini_set('display_errors', 'On');
 	else
 	{
 		#wild 
-		$maxCol = $_GET['max-multiplier'] - $GET_['min-multiplier'] + 2;
+		$maxCol = $_GET['max-multiplier'] - $_GET['min-multiplier'] + 2;
 		#tall 
-		$maxRow = $GET_['max-multiplicand'] -$GET_['min-multiplicand'] + 2;
+		$maxRow = $_GET['max-multiplicand'] -$_GET['min-multiplicand'] + 2;
 		$wild = 1;
 		$tall = 1;
 		$startWild = $_GET['min-multiplier'];
-		$startTall = $GET_['min-multiplicand'];
+		$startTall = $_GET['min-multiplicand'];
 		echo "<table>";
 			while($tall <= $maxRow)
 			{
