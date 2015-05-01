@@ -34,7 +34,7 @@ ini_set('display_errors', 'On');
 
 	}
 	#if it is not a int
-	else if(!ctype_digit($_GET['min-multiplicand'], $_GET['max-multiplicand'], $_GET['min-multiplier'], $_GET['max-multiplier'])) 
+	else if(!ctype_digit($_GET['min-multiplicand'])|| !ctype_digit($_GET['max-multiplicand'])||!ctype_digit( $_GET['min-multiplier'])||!ctype_digit( $_GET['max-multiplier'])) 
 	{
 		if(!ctype_digit($_GET['min-multiplicand']))
 		{
