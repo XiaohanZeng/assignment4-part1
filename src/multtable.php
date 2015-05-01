@@ -82,12 +82,14 @@ ini_set('display_errors', 'On');
 						$startWild++;
 						$wild ++;
 					}
+					echo "</tr>";
 				}
 				
 				else
 				{
 					
 						$wild = 2;
+						$startWild = intval($_GET['min-multiplier']);
 						echo"<tr>";
 						echo"<th>";
 						echo $startTall;
@@ -102,6 +104,7 @@ ini_set('display_errors', 'On');
 							
 						}
 						$startTall++;
+						echo "</tr>";
 								
 				}
 				$tall++;
