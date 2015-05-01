@@ -87,16 +87,16 @@ ini_set('display_errors', 'On');
 				else
 				{
 					
-				
+						$wild = 2;
 						echo"<tr>";
 						echo"<th>";
 						echo $startTall;
 						echo"</th>";
 						while($wild <= $maxCol)
 						{
-							echo "<th>";
+							echo "<td>";
 							echo $startWild * $startTall;
-							echo "</th>";
+							echo "</td>";
 							$startWild++;
 							$wild ++;
 							
