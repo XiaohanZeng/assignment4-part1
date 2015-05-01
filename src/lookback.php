@@ -21,7 +21,7 @@ ini_set('display_errors', 'On');
 		$data['parameters']] = 'null';
 	}
 	*/
-	echo "{"Type" : "[GET|POST]", ";
+	echo '{"Type" : "[GET|POST]", ';
 	echo json_encode($_GET, JSON_FORCE_OBJECT);
 	echo "}";
 	?>
