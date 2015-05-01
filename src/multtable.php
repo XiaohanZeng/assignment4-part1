@@ -86,8 +86,8 @@ ini_set('display_errors', 'On');
 				
 				else
 				{
-					while($tall <=$maxRow)
-					{
+					
+				
 						echo"<tr>";
 						echo"<th>";
 						echo $startTall;
@@ -102,7 +102,7 @@ ini_set('display_errors', 'On');
 							
 						}
 						$startTall++;
-					}				
+								
 				}
 				$tall++;
 			}
