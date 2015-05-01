@@ -58,13 +58,13 @@ ini_set('display_errors', 'On');
 	else
 	{
 		#wild 
-		$maxCol = $_GET['max-multiplier'] - $_GET['min-multiplier'] + 2;
+		$maxCol = intval($_GET['max-multiplier']) - intval($_GET['min-multiplier']) + 2;
 		#tall 
-		$maxRow = $_GET['max-multiplicand'] -$_GET['min-multiplicand'] + 2;
+		$maxRow = intval($_GET['max-multiplicand']) - intval($_GET['min-multiplicand']) + 2;
 		$wild = 1;
 		$tall = 1;
-		$startWild = $_GET['min-multiplier'];
-		$startTall = $_GET['min-multiplicand'];
+		$startWild = intval($_GET['min-multiplier']);
+		$startTall = intval($_GET['min-multiplicand']);
 		echo "<table>";
 			while($tall <= $maxRow)
 			{
@@ -72,13 +72,13 @@ ini_set('display_errors', 'On');
 				{
 					echo "<tr>";
 					echo "<th>";
-					echo "<th>";
+					echo "</th>";
 					$wild = $wild +1;
 					while($wild <= $maxCol)
 					{
 						echo "<th>";
 						echo $startWild;
-						echo "<th>";
+						echo "</th>";
 						$startWild++;
 						$wild ++;
 					}
@@ -90,14 +90,15 @@ ini_set('display_errors', 'On');
 						echo"<tr>";
 						echo"<th>";
 						echo $startTall;
-						echo"<th>";
+						echo"</th>";
 						while($wild <= $maxCol)
 						{
 							echo "<th>";
 							echo $startWild * $startTall;
-							echo "<th>";
+							echo "</th>";
 							$startWild++;
 							$wild ++;
+							
 						}
 						$startTall++;
 						$tall++; 
