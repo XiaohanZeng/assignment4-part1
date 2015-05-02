@@ -12,25 +12,32 @@ ini_set('display_errors', 'On');
 	{
 		if(!isset($_GET['min-multiplicand']))
 		{
-			echo "Missing parameter min-multiplicand ";
+			echo "Missing parameter min-multiplicand. ";
 		}
 		if(!isset($_GET['max-multiplicand']))
 		{
-			echo "Missing parameter max-multiplicand ";
+			echo "Missing parameter max-multiplicand. ";
 		}
 		if(!isset($_GET['min-multiplier']))
 		{
-			echo "Missing parameter min-multiplier ";
+			echo "Missing parameter min-multiplier. ";
 		}
 			if(!isset($_GET['max-multiplier']))
 		{
-			echo "Missing parameter max-multiplier ";
+			echo "Missing parameter max-multiplier. ";
 		}
 	}
 	#biger
-	else if($_GET['min-multiplicand'] > $_GET['min-multiplicand'] || $_GET['min-multiplier'] > $_GET['max-multiplier'])
+	else if(intval($_GET['min-multiplicand']) > intval($_GET['max-multiplicand']) || intval($_GET['min-multiplier']) > intval($_GET['max-multiplier']))
 	{
-		echo "Minimum [multiplicand|multiplier] larger than maximum.";
+		if(intval($_GET['min-multiplicand']) > intval($_GET['max-multiplicand']))
+		{
+			echo "Minimum multiplicand larger than maximum.";
+		}
+		else
+		{
+			echo "Minimum multiplier larger than maximum.";
+		}
 
 	}
 	#if it is not a int
