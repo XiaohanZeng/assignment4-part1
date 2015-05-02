@@ -18,7 +18,7 @@ session_start();
 			$_SESSION['count'] = 0;
 			echo "Hello ".$newName. " you have visited this page ".$_SESSION['count']. " times".".<br/>";
 			echo "Click here to logout ";
-			echo '<a href="login.php?logout=sb">here</a>.';
+			echo '<a href="login.php?logout=true">here</a>.';
 			$_SESSION['count'] = $_SESSION['count']+1;
 			echo "<br>"." click  "."<a href=\"content2.php\">here</a>"." to go to content2";  
 		}
@@ -26,13 +26,13 @@ session_start();
 		{
 			echo $_SESSION['username']." has logged in";
 			echo "Click here to logout ";
-			echo '<a href="login.php?logout=sb">here</a>.';
+			echo '<a href="login.php?logout=true">here</a>.';
 		}
 		else
 		{
 			echo "Hello ".$newName. " you have visited this page ".$_SESSION['count']. " times".".<br/>";
 			echo "Click here to logout ";
-			echo '<a href="login.php?logout=sb">here</a>.';
+			echo '<a href="login.php?logout=true">here</a>.';
 			$_SESSION['count'] = $_SESSION['count']+1;
 			echo "<br>"." click  "."<a href=\"content2.php\">here</a>"." to go to content2";  
 		}
@@ -44,7 +44,7 @@ session_start();
 		{
 			echo "Hello ".$_SESSION['username']. " you have visited this page ".$_SESSION['count']. " times".".<br/>";
 			echo "Click here to logout ";
-			echo '<a href="login.php?logout=sb">here</a>.';
+			echo '<a href="login.php?logout=true">here</a>.';
 			$_SESSION['count'] = $_SESSION['count']+1;	
 			echo "<br>"." click  "."<a href=\"content2.php\">here</a>"." to go to content2"; 
 		}
