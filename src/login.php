@@ -8,5 +8,17 @@
       <input type="text" name="username" value="Username">
       <input type="submit" value="Login">
     </form>
+
+
+<?php
+if(isset($_GET['logout']) && $_GET['logout']=='sb')
+{
+	session_start();
+	session_unset();
+	session_destroy();
+	echo "sb";
+}
+exit();
+?>
   </body>
 </html>
