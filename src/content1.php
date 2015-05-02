@@ -12,7 +12,7 @@ session_start();
     if(isset($_REQUEST['username'])) 
 	{
 		$newName = $_REQUEST['username'];
-		if(!isset($_SESSION['username']))  
+		if(!isset($_SESSION['username']) || ($_SESSION['username'] != $_REQUEST['username']))  
 		{
 			$_SESSION['username'] = $newName;
 			$_SESSION['count'] = 0;
