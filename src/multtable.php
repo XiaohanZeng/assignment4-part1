@@ -34,7 +34,7 @@ ini_set('display_errors', 'On');
 		{
 			echo "Minimum multiplicand larger than maximum.";
 		}
-		else
+		if(intval($_GET['min-multiplier']) > intval($_GET['max-multiplier']))
 		{
 			echo "Minimum multiplier larger than maximum.";
 		}
