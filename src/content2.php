@@ -10,7 +10,7 @@ session_start();
 	<?php
 		if (isset($_SESSION['username']))
 		{
-			$newName = $_REQUEST['username'];
+			$newName = $_SESSION['username'];
 			echo "Hello ".$newName. " you have visited this page ".$_SESSION['count']. " times".".<br/>";
 			echo "Click here to logout ";
 			echo '<a href="login.php?logout=sb">here</a>.';
