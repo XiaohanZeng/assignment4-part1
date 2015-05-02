@@ -27,7 +27,7 @@ session_start();
 		// check if user has logged in
 		if (isset($_SESSION['username']))
 		{
-			echo "Hello ".$newName. " you have visited this page ".$_SESSION['count']. " times".".<br/>";
+			echo "Hello ".$_SESSION['username']. " you have visited this page ".$_SESSION['count']. " times".".<br/>";
 			echo "Click here to logout ";
 			echo '<a href="login.php?logout=sb">here</a>.';
 			$_SESSION['count'] = $_SESSION['count']+1;	
