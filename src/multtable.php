@@ -60,7 +60,7 @@ ini_set('display_errors', 'On');
 		}
 	}
 	# all meet creat table
-	else(!$exist_error)
+	else
 	{
 		#wild 
 		$maxCol = intval($_GET['max-multiplier']) - intval($_GET['min-multiplier']) + 2;
