@@ -50,18 +50,14 @@ ini_set('display_errors', 'On');
 		$exist_error = true;
 	}
 	#biger
-	if(
-	(isset($_GET['min-multiplicand']) && isset($_GET['max-multiplicand']) && ctype_digit($_GET['min-multiplicand']) && ctype_digit($_GET['max-multiplicand']) && intval($_GET['min-multiplicand']) > intval($_GET['max-multiplicand'])) || 
-	(isset($_GET['min-multiplier']) && isset($_GET['max-multiplier']) && ctype_digit($_GET['min-multiplier']) && ctype_digit( $_GET['max-multiplier']) && intval($_GET['min-multiplier']) > intval($_GET['max-multiplier'])))
+	if(isset($_GET['min-multiplicand']) && isset($_GET['max-multiplicand']) && ctype_digit($_GET['min-multiplicand']) && ctype_digit($_GET['max-multiplicand']) && intval($_GET['min-multiplicand']) > intval($_GET['max-multiplicand']))
 	{
-		if(intval($_GET['min-multiplicand']) > intval($_GET['max-multiplicand']))
-		{
-			echo "Minimum multiplicand larger than maximum. <br>";
-		}
-		if(intval($_GET['min-multiplier']) > intval($_GET['max-multiplier']))
-		{
-			echo "Minimum multiplier larger than maximum.<br>";
-		}
+		echo "Minimum multiplicand larger than maximum. <br>";
+		$exist_error = true;
+	}
+	if(isset($_GET['min-multiplier']) && isset($_GET['max-multiplier']) && ctype_digit($_GET['min-multiplier']) && ctype_digit( $_GET['max-multiplier']) && intval($_GET['min-multiplier']) > intval($_GET['max-multiplier']))
+	{
+		echo "Minimum multiplier larger than maximum.<br>";
 		$exist_error = true;
 	}
 	# all meet creat table
