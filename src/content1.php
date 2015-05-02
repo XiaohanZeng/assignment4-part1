@@ -25,9 +25,8 @@ session_start();
 			$_SESSION[$newName] = 0;
 			
       }
-		echo "Hello ".$newName. "you have visited this page ".$_SESSION[$newName]. ".<br/>";
-		$_SESSION[$newName]=$_SESSION[$newName]+1;
-		echo "Click here to logout";
+		echo "Hello ".$newName. " you have visited this page ".$_SESSION[$newName]. "times".".<br/>";
+		echo "Click here to logout ";
 		echo '<a href="login.php?logout=sb">here</a>.';
     }
 	else 
