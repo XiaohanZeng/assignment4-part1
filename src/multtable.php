@@ -51,8 +51,8 @@ ini_set('display_errors', 'On');
 	}
 	#biger
 	if(
-	(ctype_digit($_GET['min-multiplicand']) && ctype_digit($_GET['max-multiplicand']) && intval($_GET['min-multiplicand']) > intval($_GET['max-multiplicand'])) || 
-	(ctype_digit( $_GET['min-multiplier'])||!type_digit( $_GET['max-multiplier']) && intval($_GET['min-multiplier']) > intval($_GET['max-multiplier'])))
+	(isset($_GET['min-multiplicand'], $_GET['max-multiplicand']) && ctype_digit($_GET['min-multiplicand']) && ctype_digit($_GET['max-multiplicand']) && intval($_GET['min-multiplicand']) > intval($_GET['max-multiplicand'])) || 
+	(isset($_GET['min-multiplier'], $_GET['max-multiplier']) && ctype_digit( $_GET['min-multiplier']) && ctype_digit( $_GET['max-multiplier']) && intval($_GET['min-multiplier']) > intval($_GET['max-multiplier'])))
 	{
 		if(intval($_GET['min-multiplicand']) > intval($_GET['max-multiplicand']))
 		{
