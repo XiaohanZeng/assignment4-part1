@@ -8,21 +8,23 @@ ini_set('display_errors', 'On');
   <body>
     <?php
 	$data = array();
-	/*if(isset($_GET['key'], $_GET['value'])// unknown number of key/value pair
+	if($_SERVER['REQUEST_METHOD'] == 'GET')
 	{
-		$data[$GET['key']] = $_GET['value'];
+		echo '{"Type" : "[GET]", "parameters":';
 	}
-	if(!isset($_GET['value']))
+	if($_SERVER['REQUEST_METHOD'] == 'POST')
 	{
-		// undefiend?
+		echo '{"Type" : "[POST]", "parameters":';	
 	}
-	if(isset($_GET['key'], $_GET['value'])
+	if(empty($_REQUEST))
 	{
-		$data['parameters']] = 'null';
+		echo 'null';
 	}
-	*/
-	echo '{"Type" : "[GET|POST]", ';
-	echo json_encode($_GET, JSON_FORCE_OBJECT);
+	else
+	{
+		echo json_encode($_REQUEST, JSON_FORCE_OBJECT);
+	}
+	#no value only print "";
 	echo "}";
 	?>
 	</body>
