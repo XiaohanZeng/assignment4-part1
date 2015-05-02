@@ -11,10 +11,7 @@ session_start();
 		if (isset($_SESSION['username']))
 		{
 			$newName = $_SESSION['username'];
-			echo "Hello ".$newName. " you have visited this page ".$_SESSION['count']. " times".".<br/>";
-			echo "Click here to logout ";
-			echo '<a href="login.php?logout=true">here</a>.';
-			$_SESSION['count'] = $_SESSION['count']+1;	
+			echo "Hello ".$newName;
 			echo "<br>"." click  "."<a href=\"content1.php\">here</a>"." to go to content1";  
 		}
 		else
