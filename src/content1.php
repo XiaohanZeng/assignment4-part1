@@ -25,7 +25,7 @@ session_start();
 		elseif($_SESSION['username'] != $_REQUEST['username'])
 		{
 			echo $_SESSION['username']." has logged in";
-			echo "Click here to logout ";
+			echo "<br>Click here to logout ";
 			echo '<a href="login.php?logout=true">here</a>.';
 		}
 		else
