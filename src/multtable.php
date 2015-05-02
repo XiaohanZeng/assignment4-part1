@@ -9,7 +9,7 @@ ini_set('display_errors', 'On');
     <?php
 	$exist_error = false;
 	# not set or any of parameter is not int
-	if((!isset($_GET['min-multiplicand']) || !isset($_GET['max-multiplicand']) || !isset($_GET['min-multiplier']) !isset($_GET['max-multiplier'])) || 
+	if((!isset($_GET['min-multiplicand']) || !isset($_GET['max-multiplicand']) || !isset($_GET['min-multiplier']) || !isset($_GET['max-multiplier'])) || 
 	(!ctype_digit($_GET['min-multiplicand'])|| !ctype_digit($_GET['max-multiplicand'])||!ctype_digit( $_GET['min-multiplier'])||!ctype_digit( $_GET['max-multiplier'])))
 	{
 		if(!isset($_GET['min-multiplicand']))
