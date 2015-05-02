@@ -21,6 +21,7 @@ session_start();
 		echo "Click here to logout ";
 		echo '<a href="login.php?logout=sb">here</a>.';
 		$_SESSION['count'] = $_SESSION['count']+1;
+		echo "<br>"." click  "."<a href=\"content2.php\">here</a>"." to go to content2";  
     }
 	else 
 	{
@@ -31,6 +32,7 @@ session_start();
 			echo "Click here to logout ";
 			echo '<a href="login.php?logout=sb">here</a>.';
 			$_SESSION['count'] = $_SESSION['count']+1;	
+			echo "<br>"." click  "."<a href=\"content2.php\">here</a>"." to go to content2"; 
 		}
 		else
 		{
@@ -39,7 +41,7 @@ session_start();
 		}
      
     }
-	echo "<a href=\"content2.php\">content2</a>";
+	
     ?>
   </body>
 </html>

@@ -15,13 +15,14 @@ session_start();
 			echo "Click here to logout ";
 			echo '<a href="login.php?logout=sb">here</a>.';
 			$_SESSION['count'] = $_SESSION['count']+1;	
+			echo "<br>"." click  "."<a href=\"content1.php\">here</a>"." to go to content1";  
 		}
 		else
 		{
 			echo "A username must be entered. Click here to return to the login screen ";
 			echo "<a href=\"login.php\">here</a>";
 		}
-		echo "<a href=\"content1.php\">content1</a>";  
+		
      ?>
   </body>
 </html>
