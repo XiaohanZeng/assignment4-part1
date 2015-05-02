@@ -12,16 +12,30 @@ session_start();
     if(isset($_REQUEST['username'])) 
 	{
 		$newName = $_REQUEST['username'];
-		if(!isset($_SESSION['username']) || ($_SESSION['username'] != $_REQUEST['username']))  
+		if(!isset($_SESSION['username']))  
 		{
 			$_SESSION['username'] = $newName;
 			$_SESSION['count'] = 0;
+			echo "Hello ".$newName. " you have visited this page ".$_SESSION['count']. " times".".<br/>";
+			echo "Click here to logout ";
+			echo '<a href="login.php?logout=sb">here</a>.';
+			$_SESSION['count'] = $_SESSION['count']+1;
+			echo "<br>"." click  "."<a href=\"content2.php\">here</a>"." to go to content2";  
 		}
-		echo "Hello ".$newName. " you have visited this page ".$_SESSION['count']. " times".".<br/>";
-		echo "Click here to logout ";
-		echo '<a href="login.php?logout=sb">here</a>.';
-		$_SESSION['count'] = $_SESSION['count']+1;
-		echo "<br>"." click  "."<a href=\"content2.php\">here</a>"." to go to content2";  
+		elseif($_SESSION['username'] != $_REQUEST['username'])
+		{
+			echo $_SESSION['username']." has logged in";
+			echo "Click here to logout ";
+			echo '<a href="login.php?logout=sb">here</a>.';
+		}
+		else
+		{
+			echo "Hello ".$newName. " you have visited this page ".$_SESSION['count']. " times".".<br/>";
+			echo "Click here to logout ";
+			echo '<a href="login.php?logout=sb">here</a>.';
+			$_SESSION['count'] = $_SESSION['count']+1;
+			echo "<br>"." click  "."<a href=\"content2.php\">here</a>"." to go to content2";  
+		}
     }
 	else 
 	{
