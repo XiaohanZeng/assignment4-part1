@@ -7,12 +7,11 @@ ini_set('display_errors', 'On');
   <head><title></title></head>
   <body>
     <?php
-	$data = array();
-	if($_SERVER['REQUEST_METHOD'] == 'GET')
+	if($_SERVER["REQUEST_METHOD"] == "GET")
 	{
 		echo '{"Type" : "[GET]", "parameters":';
 	}
-	if($_SERVER['REQUEST_METHOD'] == 'POST')
+	if($_SERVER["REQUEST_METHOD"] == "POST")
 	{
 		echo '{"Type" : "[POST]", "parameters":';	
 	}
