@@ -7,28 +7,48 @@ ini_set('display_errors', 'On');
   <head><title></title></head>
   <body>
     <?php
-	# not set
-	if(!isset($_GET['min-multiplicand'], $_GET['max-multiplicand'], $_GET['min-multiplier'], $_GET['max-multiplier']))
+	# not set or any of parameter is not int
+	if(!isset($_GET['min-multiplicand'], $_GET['max-multiplicand'], $_GET['min-multiplier'], $_GET['max-multiplier']) || 
+	(!ctype_digit($_GET['min-multiplicand'])|| !ctype_digit($_GET['max-multiplicand'])||!ctype_digit( $_GET['min-multiplier'])||!ctype_digit( $_GET['max-multiplier'])))
 	{
 		if(!isset($_GET['min-multiplicand']))
 		{
 			echo "Missing parameter min-multiplicand. ";
 		}
+		elseif(!ctype_digit($_GET['min-multiplicand']))
+		{
+			echo "min-multiplicand must be an integer ";
+		}
+		
 		if(!isset($_GET['max-multiplicand']))
 		{
 			echo "Missing parameter max-multiplicand. ";
 		}
+		elseif(!ctype_digit($_GET['max-multiplicand']))
+		{
+			echo "max-multiplicand must be an integer";
+		}
+		
 		if(!isset($_GET['min-multiplier']))
 		{
 			echo "Missing parameter min-multiplier. ";
 		}
-			if(!isset($_GET['max-multiplier']))
+		elseif(!ctype_digit($_GET['min-multiplier']))
+		{
+			echo "min-multiplier must be an integer ";
+		}
+		
+		if(!isset($_GET['max-multiplier']))
 		{
 			echo "Missing parameter max-multiplier. ";
 		}
+		elseif(!ctype_digit($_GET['max-multiplier']))
+		{
+			echo "max-multiplier must be an integer ";
+		}
 	}
 	#biger
-	else if(intval($_GET['min-multiplicand']) > intval($_GET['max-multiplicand']) || intval($_GET['min-multiplier']) > intval($_GET['max-multiplier']))
+	elseif(intval($_GET['min-multiplicand']) > intval($_GET['max-multiplicand']) || intval($_GET['min-multiplier']) > intval($_GET['max-multiplier']))
 	{
 		if(intval($_GET['min-multiplicand']) > intval($_GET['max-multiplicand']))
 		{
@@ -38,31 +58,9 @@ ini_set('display_errors', 'On');
 		{
 			echo "Minimum multiplier larger than maximum.";
 		}
-
 	}
-	#if it is not a int
-	else if(!ctype_digit($_GET['min-multiplicand'])|| !ctype_digit($_GET['max-multiplicand'])||!ctype_digit( $_GET['min-multiplier'])||!ctype_digit( $_GET['max-multiplier'])) 
-	{
-		if(!ctype_digit($_GET['min-multiplicand']))
-		{
-			echo "min-multiplicand must be an integer ";
-		}
-		if(!ctype_digit($_GET['max-multiplicand']))
-		{
-			echo "max-multiplicand must be an integer";
-		}
-		if(!ctype_digit($_GET['min-multiplier']))
-		{
-			echo "min-multiplier must be an integer ";
-		}
-		if(!ctype_digit($_GET['max-multiplier']))
-		{
-			echo "max-multiplier must be an integer ";
-		}
-	}
-
 	# all meet creat table
-	else
+	else(!$exist_error)
 	{
 		#wild 
 		$maxCol = intval($_GET['max-multiplier']) - intval($_GET['min-multiplier']) + 2;
