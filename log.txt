@@ -1,3 +1,18 @@
 Start: Thursday, 30 April 2015 10:30 -0800
-End:
+End: 12:00
 Task: Reading requirment and start 
+Start: Fri, 1 May 2015 9:00
+End:12:00
+Tasks: add all 3 files 
+
+Start: Fri, 1 May 2015 12:00
+End:2:00
+Tasks: debug for multtable.php and loopback.php files
+
+Start: Fri, 1 May 2015 2:00
+End:5:00
+Tasks: debug for login.php content1.php content2.php files
+
+Start: Fri, 1 May 2015 5:00
+End:9:00
+Tasks: test all files and debug
